@@ -4,11 +4,11 @@
 #include <allegro5/allegro_native_dialog.h>
 #include <allegro5/allegro_primitives.h>
 #include <allegro5/allegro_font.h>
+#include <allegro5/allegro_ttf.h>
 #include <stdio.h>
 
-#include "..\allegro_linkers.h"
+#include "../allegro_linkers.h" // Ensure this file exists in the correct location
 #include "Location-BasicDebugging.h"
-
 
 Location ballLocation(10, 20);
 Location ballIncrement(6, 3);
@@ -42,7 +42,8 @@ void drawFrame(ALLEGRO_FONT *font)
 
 int main(void)
 {
-	char* error = "";
+	const char* error = "";
+// And similarly for all other assignments to 'error'
 	ALLEGRO_DISPLAY *display = NULL;
 	ALLEGRO_FONT *font = NULL;
 	ALLEGRO_TIMER *timer = NULL;
